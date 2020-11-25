@@ -183,6 +183,12 @@ function App() {
         }
     }
 
+    const googleCalLink = (item: AgendaItem): string => {
+        const start = new Date(item.schedulingData.start.timestamp * 1000).toISOString().replace(/-|:|\.\d\d\d/g,"")
+        const end = new Date(item.schedulingData.end.timestamp * 1000).toISOString().replace(/-|:|\.\d\d\d/g,"")
+        return `https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURI(item.name)}&dates=${start}/${end}&details=${encodeURI(item.description)}&location=https://virtual.awsevents.com/media/${encodeURI(item.id)}`
+    }
+
     return (
     <div className="App">
       <header className="flex bg-green-800 p-4 shadow-lg mt-auto text-white">
@@ -201,13 +207,13 @@ function App() {
                       <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option>
                   </select> December
                   </div>
-                  <label className="mr-2">Earliest Start Hour:</label>
+                  <label className="mr-2">Earliest Start Hour (GMT):</label>
                   <div>
                       <select value={timeFilter.EarlyHour} onChange={(e) => setTimeFilter({...timeFilter, EarlyHour: e.target.value, LateHour: timeFilter.LateHour < e.target.value ? e.target.value : timeFilter.LateHour})} className="w-4/5, border-2 border-green-800">
                       <option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option>
                     </select>
                   </div>
-                  <label className="mr-2">Latest Start Hour:</label>
+                  <label className="mr-2">Latest Start Hour (GMT):</label>
                   <div>
                       <select value={timeFilter.LateHour} onChange={(e) => setTimeFilter({...timeFilter, LateHour: e.target.value, EarlyHour: timeFilter.EarlyHour > e.target.value ? e.target.value : timeFilter.EarlyHour})} className="w-4/5, border-2 border-green-800">
                       <option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option>
@@ -358,14 +364,18 @@ function App() {
                                       return <div key={tag} className="bg-green-200 border-2 border-green-600 p-1 px-2 rounded-xl shadow-lg mr-1">{tag}</div>
                                   })}
                               </div>
-                              <span>{start.getDate()}/{start.getMonth() + 1} {start.getHours() < 10 ? '0' : ''}{start.getHours()}:{start.getMinutes() < 10 ? '0' : ''}{start.getMinutes()} - {end.getHours() < 10 ? '0' : ''}{end.getHours()}:{end.getMinutes() < 10 ? '0' : ''}{end.getMinutes()}</span>
+                              <span>{start.getDate()}/{start.getMonth() + 1} {start.getHours() < 10 ? '0' : ''}{start.getHours()}:{start.getMinutes() < 10 ? '0' : ''}{start.getMinutes()} - {end.getHours() < 10 ? '0' : ''}{end.getHours()}:{end.getMinutes() < 10 ? '0' : ''}{end.getMinutes()} GMT</span>
                               <p>
                                   {agendaItem.description.replace(/<.*>/g, "")}
                               </p>
+                              <div className="flex flex-wrap">
+                                  <div className="bg-blue-300 border-2 border-blue-600 p-1 px-2 rounded-xl shadow-lg mr-1">
+                                      <a href={googleCalLink(agendaItem)} rel="noreferrer" target="_blank">Add to Google Calendar</a>
+                                  </div>
+                              </div>
                           </div>
                       </div>
                   )
-
               })}
           </div>
 
