@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/reinvent-agenda/static/css/main.cc76cdad.chunk.css",
-    "main.js": "/reinvent-agenda/static/js/main.abf23509.chunk.js",
-    "main.js.map": "/reinvent-agenda/static/js/main.abf23509.chunk.js.map",
+    "main.js": "/reinvent-agenda/static/js/main.af2f3be8.chunk.js",
+    "main.js.map": "/reinvent-agenda/static/js/main.af2f3be8.chunk.js.map",
     "runtime-main.js": "/reinvent-agenda/static/js/runtime-main.e2eca441.js",
     "runtime-main.js.map": "/reinvent-agenda/static/js/runtime-main.e2eca441.js.map",
     "static/js/2.adb1d29a.chunk.js": "/reinvent-agenda/static/js/2.adb1d29a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e2eca441.js",
     "static/js/2.adb1d29a.chunk.js",
     "static/css/main.cc76cdad.chunk.css",
-    "static/js/main.abf23509.chunk.js"
+    "static/js/main.af2f3be8.chunk.js"
   ]
 }
