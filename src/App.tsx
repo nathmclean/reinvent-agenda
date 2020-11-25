@@ -192,7 +192,7 @@ function App() {
     return (
     <div className="App">
       <header className="flex bg-green-800 p-4 shadow-lg mt-auto text-white">
-        <div className="text-2xl">ReInvent Filter</div>
+        <div className="text-2xl">ReInvent 2020</div>
         <div className="text-xl ml-4 mt-1">Agenda Filter</div>
       </header>
       <main className="m-4 my-8 flex flex-col md:flex-row">
