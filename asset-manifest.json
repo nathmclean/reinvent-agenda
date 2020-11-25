@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/nathmclean/reinvent-agenda/static/css/main.cc76cdad.chunk.css",
-    "main.js": "/nathmclean/reinvent-agenda/static/js/main.9cfaabdd.chunk.js",
-    "main.js.map": "/nathmclean/reinvent-agenda/static/js/main.9cfaabdd.chunk.js.map",
-    "runtime-main.js": "/nathmclean/reinvent-agenda/static/js/runtime-main.17b9824f.js",
-    "runtime-main.js.map": "/nathmclean/reinvent-agenda/static/js/runtime-main.17b9824f.js.map",
-    "static/js/2.adb1d29a.chunk.js": "/nathmclean/reinvent-agenda/static/js/2.adb1d29a.chunk.js",
-    "static/js/2.adb1d29a.chunk.js.map": "/nathmclean/reinvent-agenda/static/js/2.adb1d29a.chunk.js.map",
-    "static/js/3.4c6690f3.chunk.js": "/nathmclean/reinvent-agenda/static/js/3.4c6690f3.chunk.js",
-    "static/js/3.4c6690f3.chunk.js.map": "/nathmclean/reinvent-agenda/static/js/3.4c6690f3.chunk.js.map",
-    "index.html": "/nathmclean/reinvent-agenda/index.html",
-    "static/css/main.cc76cdad.chunk.css.map": "/nathmclean/reinvent-agenda/static/css/main.cc76cdad.chunk.css.map",
-    "static/js/2.adb1d29a.chunk.js.LICENSE.txt": "/nathmclean/reinvent-agenda/static/js/2.adb1d29a.chunk.js.LICENSE.txt"
+    "main.css": "/reinvent-agenda/static/css/main.cc76cdad.chunk.css",
+    "main.js": "/reinvent-agenda/static/js/main.9cfaabdd.chunk.js",
+    "main.js.map": "/reinvent-agenda/static/js/main.9cfaabdd.chunk.js.map",
+    "runtime-main.js": "/reinvent-agenda/static/js/runtime-main.e2eca441.js",
+    "runtime-main.js.map": "/reinvent-agenda/static/js/runtime-main.e2eca441.js.map",
+    "static/js/2.adb1d29a.chunk.js": "/reinvent-agenda/static/js/2.adb1d29a.chunk.js",
+    "static/js/2.adb1d29a.chunk.js.map": "/reinvent-agenda/static/js/2.adb1d29a.chunk.js.map",
+    "static/js/3.4c6690f3.chunk.js": "/reinvent-agenda/static/js/3.4c6690f3.chunk.js",
+    "static/js/3.4c6690f3.chunk.js.map": "/reinvent-agenda/static/js/3.4c6690f3.chunk.js.map",
+    "index.html": "/reinvent-agenda/index.html",
+    "static/css/main.cc76cdad.chunk.css.map": "/reinvent-agenda/static/css/main.cc76cdad.chunk.css.map",
+    "static/js/2.adb1d29a.chunk.js.LICENSE.txt": "/reinvent-agenda/static/js/2.adb1d29a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.17b9824f.js",
+    "static/js/runtime-main.e2eca441.js",
     "static/js/2.adb1d29a.chunk.js",
     "static/css/main.cc76cdad.chunk.css",
     "static/js/main.9cfaabdd.chunk.js"
