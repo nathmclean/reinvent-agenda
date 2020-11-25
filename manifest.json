@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "ReInvent Time Filter",
+  "description": "Filter the Reinvent schedule to hours you will actually be awake for",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "ReInvent Time Filter"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.reinvent.awsevents.com/*", "*://reinvent.awsevents.com/*"],
+      "css": ["hide-twitter-followers.css"],
+      "js": ["hide-twitter-followers.js"]
+    }
+  ],
+  "permissions": ["*://*.reinvent.awsevents.com/*", "*://reinvent.awsevents.com/*"]
+}
